@@ -19,13 +19,12 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton mPrevButton;
     private Button mCheatButton;
     private TextView mQuestionTextView;
-    private boolean mIsCheater;
     private static final String TAG = "MainActivity";
     private static final String KEY_INDEX = "index";
     private static final int REQUEST_CODE_CHEAT = 0;
 
     private Question[] mQuestionBank = new Question[]{
-            new Question(R.string.question_africa, true),
+            new Question(R.string.question_australia, true),
             new Question(R.string.question_oceans, true),
             new Question(R.string.question_mideast, false),
             new Question(R.string.question_africa, false),
@@ -34,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private int mCurrentIndex = 0;
+    private boolean mIsCheater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -176,8 +176,8 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 messageResId = R.string.incorrect_toast;
             }
-            Toast.makeText(this, messageResId, Toast.LENGTH_SHORT)
-                    .show();
         }
+        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT)
+                    .show();
     }
 }
